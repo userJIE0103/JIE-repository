@@ -1,0 +1,18 @@
+#include<stdio.h>
+int Fibonacci(int n){
+	if(n==1|n==2){	
+		return n;
+	}
+	if(n>=3){	
+		return Fibonacci(n-1)+Fibonacci(n-2);
+	} 
+}
+
+int main(){
+	int sum,n;
+	printf("Enter a number:\n");
+	scanf("%d",&n);
+	Fibonacci(n);
+	printf("Fibonacci:%d",Fibonacci(n));
+	return 0;
+}
