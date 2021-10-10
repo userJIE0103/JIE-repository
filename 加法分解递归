@@ -1,0 +1,22 @@
+#include<stdio.h>
+int fun(int n, char op,int d){
+	if(n>d){
+		printf("%c%d",op,1);
+		op='+';
+		fun(n-1,op,d);
+	}else{
+		printf("%c%d",op,n);
+	}
+}
+int main(){
+	int i,n;
+	char op;
+	printf("n=");
+	scanf("%d", &n);
+	for(i=1; i<=n; i++){
+		op=' ';
+		printf("%d=",n);
+		fun(n,op,i);
+		printf("\n");
+	}
+}
