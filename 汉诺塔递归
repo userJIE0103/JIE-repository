@@ -1,0 +1,17 @@
+#include<stdio.h>
+void hanio(int n,int from,int to,int by){
+    if(n!=1){
+    hanio(n-1,from,by,to);
+    hanio(1,from,to,0);
+    hanio(n-1,by,to,from);
+    }
+    else{
+        printf("from %d to %d.\n",from,to);
+    }
+}
+int main(){
+    int n;
+    printf("Input number of plates:\n");
+    scanf("%d",&n);
+    hanio(n,1,3,2);
+}
