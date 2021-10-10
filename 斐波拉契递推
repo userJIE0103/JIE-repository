@@ -1,0 +1,32 @@
+#include<stdio.h>
+int fibonacci(int n){
+	if(n<=0){
+		printf("check your input.\n");
+		return 0;
+	}
+	if(n==1){
+		printf("%d",n);
+	}
+	else{
+		int prepre=1;
+		int pre=1;
+		int result=0;
+		//printf("%d ",prepre);
+		for(int i=1;i<=n;i++){
+			result=prepre+pre;
+			prepre=pre;
+			pre=result;
+			printf("%d ",prepre);
+		}
+	return prepre;
+	}
+} 
+
+int main(){
+	int sum,n;
+	scanf("%d",&n);
+	sum=fibonacci(n);
+	printf("\n");
+	printf("fibonacci:%d",sum);
+	return 0;
+}
